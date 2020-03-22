@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Zezhou Cheng</title>
+  <title>Zezhou Cheng | a post with code</title>
   <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 ">
 
@@ -15,8 +15,8 @@
 " />
     <meta property="og:type" content="object" />
     <meta property="og:title" content="Zezhou Cheng" />
-    <meta property="og:url" content="/" />
-    <meta property="og:description" content="<strong>Zezhou</strong>'s blogs" />
+    <meta property="og:url" content="/blog/2020/bug/" />
+    <meta property="og:description" content="a post with code" />
     <meta property="og:image"
           content="" />
   
@@ -24,7 +24,7 @@
   <link rel="shortcut icon" href="/assets/img/favicon.ico">
 
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="/">
+  <link rel="canonical" href="/blog/2020/bug/">
 </head>
 
 
@@ -34,6 +34,11 @@
 
   <div class="wrapper">
 
+    
+    <span class="site-title">
+        
+        <strong>Zezhou</strong> Cheng
+    </span>
     
 
     <nav class="site-nav">
@@ -97,19 +102,27 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title"><strong>Zezhou</strong>'s blogs</h1>
-    <h5 class="post-description">但行好事，莫问前程</h5>
+    <h1 class="post-title">a post with code</h1>
+    <p class="post-meta">March 22, 2020</p>
   </header>
 
-  <article class="post-content <strong>Zezhou</strong>'s blogs clearfix">
+  <article class="post-content">
     
+<p>{% highlight python %}  <br /> code code code <br /> {% endhighlight %}</p>
 
-<p>This website mainly collects my research notes. I believe a true understanding of a research paper is based on intuition, math, and code, so I’ll try my best to make these things very clear in my blogs. I decide to post these stuff because writing forces me think more critically and I do hope I cana get some feedbacks from every reader!</p>
+<p>Memory leak due to image.resize</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">resize</span><span class="p">(</span><span class="n">samples</span><span class="p">):</span>
+  <span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span> <span class="o">=</span> <span class="n">samples</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">)),</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imresize</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">)))</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+  <span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s">'img1.png'</span><span class="p">)</span>
+  <span class="n">target</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s">'img2.png'</span><span class="p">)</span>
+  <span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span> <span class="o">=</span> <span class="n">resize</span><span class="p">((</span><span class="n">img</span><span class="p">,</span> <span class="n">target</span><span class="p">))</span></code></pre></figure>
 
 
   </article>
-
-  
 
   
 
