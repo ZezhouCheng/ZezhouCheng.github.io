@@ -108,17 +108,17 @@
 
   <article class="post-content">
     
-<p>{% highlight python %}  <br /> code code code <br /> {% endhighlight %}</p>
+<p>{% highlight c++ %}  <br /> code code code <br /> {% endhighlight %}</p>
 
 <p>Memory leak due to image.resize</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">resize</span><span class="p">(</span><span class="n">samples</span><span class="p">):</span>
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="n">def</span> <span class="n">resize</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span><span class="o">:</span>
   <span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span> <span class="o">=</span> <span class="n">samples</span>
-  <span class="k">return</span> <span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">)),</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imresize</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">)))</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">image</span><span class="p">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">)),</span> <span class="n">cv2</span><span class="p">.</span><span class="n">imresize</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">)))</span>
 
-<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-  <span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s">'img1.png'</span><span class="p">)</span>
-  <span class="n">target</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s">'img2.png'</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">True</span><span class="o">:</span>
+  <span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">imread</span><span class="p">(</span><span class="err">'</span><span class="n">img1</span><span class="p">.</span><span class="n">png</span><span class="err">'</span><span class="p">)</span>
+  <span class="n">target</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">imread</span><span class="p">(</span><span class="err">'</span><span class="n">img2</span><span class="p">.</span><span class="n">png</span><span class="err">'</span><span class="p">)</span>
   <span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span> <span class="o">=</span> <span class="n">resize</span><span class="p">((</span><span class="n">img</span><span class="p">,</span> <span class="n">target</span><span class="p">))</span></code></pre></figure>
 
 
