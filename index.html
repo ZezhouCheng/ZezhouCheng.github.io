@@ -16,7 +16,7 @@
     <meta property="og:type" content="object" />
     <meta property="og:title" content="Zezhou Cheng" />
     <meta property="og:url" content="/" />
-    <meta property="og:description" content="al-folio" />
+    <meta property="og:description" content="<strong>Zezhou</strong>'s blogs" />
     <meta property="og:image"
           content="" />
   
@@ -62,8 +62,6 @@
         <!--
         
           
-            <a class="page-link" href="/about/"><strong>Zezhou</strong>'s blogs</a>
-          
         
           
         
@@ -87,8 +85,6 @@
         
           
         
-          
-        
         -->
         <!-- CV link -->
         <!-- <a class="page-link" href="/assets/pdf/CV.pdf">vitae</a> -->
@@ -104,129 +100,10 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="al-folio">al-folio</h1>
+        
 
-<p><a href="https://travis-ci.org/alshedivat/al-folio"><img src="https://travis-ci.org/alshedivat/al-folio.svg?branch=master" alt="build status" /></a>
-<a href="https://alshedivat.github.io/al-folio/"><img src="https://img.shields.io/badge/theme-demo-brightgreen.svg" alt="demo" /></a>
-<a href="https://github.com/alshedivat/al-folio/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000" alt="license" /></a>
-<a href="https://gitter.im/alshedivat/al-folio?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge"><img src="https://badges.gitter.im/alshedivat/al-folio.svg" alt="gitter" /></a></p>
+<p>This website mainly collects my research notes. I believe a true understanding of a research paper is based on intuition, math, and code, so I’ll try my best to make these things very clear in my blogs. I decide to post these stuff because writing forces me think more critically and I do hope I cana get some feedbacks from every reader!</p>
 
-<p>A simple and clean <a href="https://jekyllrb.com/">Jekyll</a> theme for academics.</p>
-
-<p><a href="https://alshedivat.github.io/al-folio/"><img src="/assets/img/full-screenshot.png" alt="Screenshot" /></a></p>
-
-<p>Originally, <strong>al-folio</strong> was based on the <a href="https://github.com/bogoli/-folio">*folio theme</a> (published by <a href="http://liabogoev.com">Lia Bogoev</a> and under the MIT license).
-Since then, it got a full re-write of the styles and many additional cool features.
-The emphasis is on whitespace, transparency, and academic usage: <a href="https://alshedivat.github.io/al-folio/">theme demo</a>.</p>
-
-<h2 id="getting-started">Getting started</h2>
-
-<p>For more about how to use Jekyll, check out <a href="https://www.taniarascia.com/make-a-static-website-with-jekyll/">this tutorial</a>.
-Why Jekyll? Read this <a href="https://karpathy.github.io/2014/07/01/switching-to-jekyll/">blog post</a>!</p>
-
-<h3 id="installation">Installation</h3>
-
-<p>Assuming you have <a href="https://www.ruby-lang.org/en/downloads/">Ruby</a> and <a href="https://bundler.io/">Bundler</a> installed on your system (<em>hint: for ease of managing ruby gems, consider using <a href="https://github.com/rbenv/rbenv">rbenv</a></em>), first fork the theme from <code class="language-plaintext highlighter-rouge">github.com:alshedivat/al-folio</code> to <code class="language-plaintext highlighter-rouge">github.com:&lt;your-username&gt;/&lt;your-repo-name&gt;</code> and do the following:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone git@github.com:&lt;your-username&gt;/&lt;your-repo-name&gt;.git
-<span class="nv">$ </span><span class="nb">cd</span> &lt;your-repo-name&gt;
-<span class="nv">$ </span>bundle <span class="nb">install</span>
-<span class="nv">$ </span>bundle <span class="nb">exec </span>jekyll serve
-</code></pre></div></div>
-
-<p>Now, feel free to customize the theme however you like (don’t forget to change the name!).
-After you are done, <strong>commit</strong> your final changes.
-Now, you can deploy your website to <a href="https://pages.github.com/">GitHub Pages</a> by running the deploy script:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./bin/deploy <span class="o">[</span><span class="nt">--user</span><span class="o">]</span>
-</code></pre></div></div>
-<p>By default, the script uses the <code class="language-plaintext highlighter-rouge">master</code> branch for the source code and deploys the webpage to <code class="language-plaintext highlighter-rouge">gh-pages</code>.
-The optional flag <code class="language-plaintext highlighter-rouge">--user</code> tells it to deploy to <code class="language-plaintext highlighter-rouge">master</code> and use <code class="language-plaintext highlighter-rouge">source</code> for the source code instead.
-Using <code class="language-plaintext highlighter-rouge">master</code> for deployment is a convention for <a href="https://help.github.com/articles/user-organization-and-project-pages/">user and organization pages</a>.</p>
-
-<p><strong>Note:</strong> when deploying your user or organization page, make sure the <code class="language-plaintext highlighter-rouge">_config.yml</code> has <code class="language-plaintext highlighter-rouge">url</code> and <code class="language-plaintext highlighter-rouge">baseurl</code> fields as follows.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>url: # should be empty
-baseurl:  # should be empty
-</code></pre></div></div>
-
-<h3 id="usage">Usage</h3>
-
-<p>Note that <code class="language-plaintext highlighter-rouge">_pages/about.md</code> is built to index.html in the published site. There is therefore no need to have a separate index page for the project. If an index page does exist in the root directory then this will prevent <code class="language-plaintext highlighter-rouge">_pages/about.md</code> from being added to the built site.</p>
-
-<h2 id="features">Features</h2>
-
-<h4 id="ergonomic-publications">Ergonomic Publications</h4>
-
-<p>Your publications page is generated automatically from your BibTex bibliography.
-Simply edit <code class="language-plaintext highlighter-rouge">_bibliography/papers.bib</code>.
-You can also add new <code class="language-plaintext highlighter-rouge">*.bib</code> files and customize the look of your publications however you like by editing <code class="language-plaintext highlighter-rouge">_pages/publications.md</code>.</p>
-
-<p>Keep meta-information about your co-authors in <code class="language-plaintext highlighter-rouge">_data/coauthors.yml</code> and Jekyll will insert links to their webpages automatically.</p>
-
-<h4 id="collections">Collections</h4>
-<p>This Jekyll theme implements collections to let you break up your work into categories.
-The example is divided into news and projects, but easily revamp this into apps, short stories, courses, or whatever your creative work is.</p>
-
-<blockquote>
-  <p>To do this, edit the collections in the <code class="language-plaintext highlighter-rouge">_config.yml</code> file, create a corresponding folder, and create a landing page for your collection, similar to <code class="language-plaintext highlighter-rouge">_pages/projects.md</code>.</p>
-</blockquote>
-
-<p>Two different layouts are included: the blog layout, for a list of detailed descriptive list of entries, and the projects layout.
-The projects layout overlays a descriptive hoverover on a background image.
-If no image is provided, the square is auto-filled with the chosen theme color.
-Thumbnail sizing is not necessary, as the grid crops images perfectly.</p>
-
-<h4 id="theming">Theming</h4>
-<p>Six beautiful theme colors have been selected to choose from.
-The default is purple, but quickly change it by editing <code class="language-plaintext highlighter-rouge">$theme-color</code> variable in the <code class="language-plaintext highlighter-rouge">_sass/variables.scss</code> file (line 72).
-Other color variables are listed there, as well.</p>
-
-<h4 id="photos">Photos</h4>
-<p>Photo formatting is made simple using rows of a 3-column system.
-Make photos 1/3, 2/3, or full width.
-Easily create beautiful grids within your blog posts and projects pages:</p>
-
-<p align="center">
-  <a href="https://alshedivat.github.io/al-folio/projects/1_project/">
-    <img src="assets/img/photos-screenshot.png" width="75%" />
-  </a>
-</p>
-
-<h4 id="code-highlighting">Code Highlighting</h4>
-<p>This theme implements Jekyll’s built in code syntax highlighting with Pygments.
-Just use the liquid tags `</p>
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="sb">` and `</span></code></pre></figure>
-<p>` to delineate your code:</p>
-
-<p align="center">
-  <a href="https://alshedivat.github.io/al-folio/blog/2015/code/">
-    <img src="assets/img/code-screenshot.png" width="75%" />
-  </a>
-</p>
-
-<h4 id="social-media-previews">Social media previews</h4>
-<p>The al-folio theme optionally supports preview images on social media.
-To enable this functionality you will need to set <code class="language-plaintext highlighter-rouge">serve_og_meta</code> to <code class="language-plaintext highlighter-rouge">true</code> in
-your <code class="language-plaintext highlighter-rouge">_config.yml</code>. Once you have done so, all your site’s pages will include
-Open Graph data in the HTML head element.</p>
-
-<p>You will then need to configure what image to display in your site’s social
-media previews. This can be configured on a per-page basis, by setting the
-<code class="language-plaintext highlighter-rouge">og_image</code> page variable. If for an individual page this variable is not set,
-then the theme will fall back to a site-wide <code class="language-plaintext highlighter-rouge">og_image</code> variable, configurable
-in your <code class="language-plaintext highlighter-rouge">_config.yml</code>. In both the page-specific and site-wide cases, the
-<code class="language-plaintext highlighter-rouge">og_image</code> variable needs to hold the URL for the image you wish to display in
-social media previews.</p>
-
-<h2 id="contributing">Contributing</h2>
-
-<p>Feel free to contribute new features and theme improvements by sending a pull request.
-Style improvements and bug fixes are especially welcome.</p>
-
-<h2 id="license">License</h2>
-
-<p>The theme is available as open source under the terms of the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
 
       </div>
     </div>
